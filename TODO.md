@@ -8,6 +8,7 @@
   * Corregir los desbordamientos con fit-content o similar
   * Hacer responsivo TODO el diseno
   * Lograr quitar el sticky del aside con la historia del liceo
+  * Corregir los nombres de "entry" a "post"
 
 ### Paleta de Colores:
 

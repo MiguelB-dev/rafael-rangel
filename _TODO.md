@@ -1,14 +1,17 @@
-# TODOs para el proyecto del C.E Rafael Rangel
+# TODO del proyecto del C.E Rafael Rangel
 
 
 ## Frontend
 
-**Nada pendiente.**
+* **Sobre el index.html:**
+  * Hacer funcionar los botones
+  * Corregir los desbordamientos con fit-content o similar
+  * Hacer responsivo TODO el diseno
+  * Lograr quitar el sticky del aside con la historia del liceo
 
 ### Paleta de Colores:
 
 * **Principal:** #1d7bc4
-* **Complementario:** 
 
 
 ## Backend

@@ -20,7 +20,7 @@ body {
     display: grid;
     min-height: 100dvh;
     grid-template-columns: 1fr 1fr 0.8fr;
-    grid-template-rows: min-content 1fr min-content;
+    grid-template-rows: min-content min-content 1fr min-content;
     grid-template-areas: 
         "header header header"
         "carousel carousel aside"
@@ -272,7 +272,7 @@ main {
     padding: 3em 5em;
 }
 
-.entry-container {
+.post-container {
     margin: 15px auto;
     display: grid;
     width: 90%;
@@ -282,7 +282,7 @@ main {
     gap: 3em 2.2em;
 }
 
-.entry {
+.post {
     background-color: aliceblue;
     border-radius: 6px;
     box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.151);
@@ -291,23 +291,23 @@ main {
     text-overflow: ellipsis;
 }
 
-.entry:hover {
+.post:hover {
     transform: scale(1.01);
     box-shadow: 0px 12px 16px -5px rgba(0, 0, 0, 0.226);
 }
 
-.entry__link {
+.post__link {
     text-decoration: none;
 }
 
-.entry__container-image {
+.post__container-image {
     max-width: 100%;
     height: 65%;
     overflow: hidden;
     border-radius: 6px 6px 0 0;
 }
 
-.entry__title {
+.post__title {
     color: #1d7bc4;
     text-align: center;
     font-size: clamp(14px, 2vw, 16px);
@@ -315,22 +315,22 @@ main {
     margin-top: 0.7em;
 }
 
-.entry__image {
+.post__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
-/* Dar peso visual a la Primera publicacion */
-.entry:first-child {
+/* Dar peso visual a la primera publicacion */
+.post:first-child {
     grid-column: span 2;
     height: 300px;
     width: 90%;
     align-self: center;
     justify-self: center;
 }
-.entry:first-child .entry__container-image {
+.post:first-child .post__container-image {
     height: 75%;
 }
 
@@ -381,6 +381,7 @@ main {
     font-size: 0.9em;
     margin-bottom: 1em;
 }
+
 
 
 
@@ -474,7 +475,7 @@ main {
 
     
     /* --- MAIN SECTION --- */
-    .entry-container {
+    .post-container {
         width: 80%;
         grid-template-columns: 85%;
         padding: 0%;

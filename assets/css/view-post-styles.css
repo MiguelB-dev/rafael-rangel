@@ -6,7 +6,11 @@
     font-family: 'Montserrat';
 }
 
-
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
 
 
 /* --- HEADER SECTION --- */
@@ -144,6 +148,45 @@
 
 
 
+/* --- MAIN SECTION --- */
+main {
+    flex-grow: 1;
+    background-image: url(../img/photos/wall_2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.post {
+    width: 60%;
+    border-radius: 6px;
+    height: fit-content;
+    background-color: aliceblue;
+    padding: 1em;
+    margin: 50px auto 150px;
+}
+
+.post__title {
+    color: #1d7bc4;
+    padding: 0 2em;
+}
+
+.post__image {
+    margin: 2em auto 2.4em;
+    display: block;
+    width: 75%;
+    height: 15em;
+    object-fit: contain;
+}
+
+.post__description {
+    text-align: justify;
+    padding: 0 2.3em;
+    margin-bottom: 1em;
+}
+
+
+
+
 /* --- FOOTER SECTION --- */
 .footer {
     border-top: 1.5px solid rgb(27, 27, 27);
@@ -181,7 +224,7 @@
     
 
 
-    /*--- NAV SECTION --- */
+    /* --- NAV SECTION --- */
     .nav__hamburger {
         display: block; /* Mostrar botón hamburguesa */
     }
@@ -218,12 +261,30 @@
         padding: 20px;
         width: 100%;
     }
+    
 
 
 
+    /* --- MAIN SECTION --- */
+    .post {
+        width: 90%;
+        margin: 40px auto 50px;
+    }
+    .post__title {
+        padding: 0;
+        text-align: center;
+    }
+    .post__image {
+        width: 90%;
+        height: 12em;
+    }
+    .post__description {
+        padding: 0 .7em;
+    }
 
-    /* --- ANIMATIONS --- */
 
+    /* --- ANIMATIONS --- *
+    
     /* Animación para los items del menú */
     @keyframes fadeIn {
         from { opacity: 0; transform: translateX(-20px); }

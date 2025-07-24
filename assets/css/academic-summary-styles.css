@@ -6,6 +6,15 @@
     font-family: 'Montserrat';
 }
 
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background-image: url(../img/backgrounds/desk.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 
 
 
@@ -140,6 +149,77 @@
 .ul__item--login > a {
     background-color: rgb(78, 143, 204);
 }
+
+
+
+
+/* --- MAIN SECTION --- */
+main {
+    flex-grow: 1;
+}
+.main__title {
+    color: aliceblue;
+    background-color: #1d7bc4;
+    width: fit-content;
+    font-size: clamp(2px, 2.8dvw, 21px);
+    padding: .5em .7em;
+    display: inline-block;
+    border-radius: 6px;
+    margin: 40px 20% 40px;
+}
+
+
+/* Estilos de la tabla */
+.tabla-calificaciones {
+    width: 85%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden; /* Para evitar que el borde redondo rompa */
+    margin: auto;
+    margin-bottom: 150px;
+    font-size: clamp(10px, 1.2dvw, 15px);
+}
+
+.tabla-calificaciones thead tr:first-child {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.tabla-calificaciones thead tr:last-child {
+    background-color: #3498db;
+    color: white;
+}
+
+.tabla-calificaciones th, .tabla-calificaciones td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-calificaciones th {
+    font-weight: bold;
+}
+
+
+/* Estilos para separaciom visual entre filas y hover */
+.tabla-calificaciones tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+.tabla-calificaciones tbody tr:nth-child(even) {
+    background-color: #c8d3d2;
+}
+
+.tabla-calificaciones tbody tr:hover {
+    background-color: #b6dbf5;
+    transition: background-color 0.3s;
+}
+
+
+/* Estilo para notas e inasistencias */
+.nota-aprobatoria { color: #27ae60; font-weight: bold; }
+.nota-reprobatoria { color: #e74c3c; font-weight: bold; }
+.inasistencias { color: #f39c12; font-weight: bold; }
 
 
 

@@ -219,12 +219,8 @@ main {
 
 
 /* Color para datos de contacto */
-.contacto-email {
-    color: #2980b9;
-}
-.contacto-telefono {
-    color: #16a085;
-}
+.contacto-email {color: #2980b9;}
+.contacto-telefono {color: #16a085;}
 
 
 

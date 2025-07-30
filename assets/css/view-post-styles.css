@@ -45,6 +45,7 @@
     color: aliceblue;
     text-align: center;
     font-size: clamp(15px, 2.9dvw, 26px);
+    font-weight: bold;
     flex-basis: auto;
     flex-grow: 2;
     margin-left: 50px;

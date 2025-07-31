@@ -12,10 +12,6 @@ body {
     background-position: center;
 }
 
-
-
-
-/* --- PAGE LAYOUT --- */
 .layout {
     display: grid;
     min-height: 100dvh;

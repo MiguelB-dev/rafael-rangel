@@ -6,6 +6,15 @@
     font-family: 'Montserrat';
 }
 
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background-image: url(../img/photos/old-times.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
 
 
 
@@ -41,6 +50,7 @@
     color: aliceblue;
     text-align: center;
     font-size: clamp(15px, 2.9dvw, 26px);
+    font-weight: bold;
     flex-basis: auto;
     flex-grow: 2;
     margin-left: 50px;
@@ -76,9 +86,7 @@
     transition: transform 0.25s ease;
 }
 
-.social-media__logo:hover {
-    transform: scale(1.1);
-}
+.social-media__logo:hover {transform: scale(1.1);}
 
 /* Barra de navegacion */
 .header__nav {
@@ -132,15 +140,85 @@
     transition: background-color 0.2s ease;
 }
 
-.ul__link:hover {
-    background-color: rgb(56, 56, 56);
-}
+.ul__link:hover {background-color: rgb(56, 56, 56);}
 
 /* El enlace del link del Login */
-.ul__item--login > a {
-    background-color: rgb(78, 143, 204);
+.ul__item--login > a {background-color: rgb(78, 143, 204);}
+
+
+
+
+/* --- MAIN SECTION --- */
+main {flex-grow: 1;}
+
+.main__title {
+    color: aliceblue;
+    background-color: #1d7bc4;
+    width: fit-content;
+    font-size: clamp(20px, 2.8dvw, 23px);
+    padding: .4em .9em;
+    display: inline-block;
+    border-radius: 6px;
+    margin: 40px 15% 40px;
 }
 
+.main__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: min-content;
+    grid-template-areas: 
+        "history mvl-container";
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+.history, .mission, .vision, .location  {
+    background-color: rgb(241, 241, 241);
+    width: 90%;
+    box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.151);
+    border-radius: 6px;
+    background-color: rgb(241, 241, 241);
+}
+
+.history {
+    grid-area: history;
+    margin: auto;
+}
+
+.mvl-container {
+    grid-area: mvl-container;
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+
+.history__title, .mission__title, .vision__title, .location__title {
+    color: #1d7bc4;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    padding: 20px;
+}
+
+.history__img {
+    float: left;
+    width: 8em;
+    height: 11em;
+    margin: 15px 20px 0 20px;
+}
+
+.history__description, .mission__description, .vision__description, .location__description {
+    white-space: pre-wrap;
+    text-align: justify;
+    padding: 20px;
+}
+
+.description__phrase {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}
 
 
 
@@ -170,21 +248,17 @@
 
 /* --- RESPONSIVE DESIGN --- */
 @media (width <= 768px) {
+    
+    /* --- HEADER SECTION ---*/
     /* Quitamos las redes sociales del encabezado para mantener un diseño compacto */
-    .header__social-media, .header__logo {
-        display: none;
-    }
+    .header__social-media, .header__logo {display: none;}
     /* Sin el logo y las redes, centramos el titulo principal */
-    .header__title {
-        margin: 0;
-    }
+    .header__title {margin: 0;}
     
 
 
     /*--- NAV SECTION --- */
-    .nav__hamburger {
-        display: block; /* Mostrar botón hamburguesa */
-    }
+    .nav__hamburger {display: block; /* Mostrar botón hamburguesa */}
     .nav__ul {
         position: fixed;
         top: 0;
@@ -201,18 +275,14 @@
         z-index: 10;
         padding: 0;
     }
-    .nav__ul.active {
-        transform: translateX(0);
-    }
+    .nav__ul.active {transform: translateX(0);}  
     .ul__item {
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
         width: auto;
         text-align: center;
     }
-    .nav__ul.active .ul__item {
-        opacity: 1;
-    }
+    .nav__ul.active .ul__item {opacity: 1;}
     .ul__link {
         display: block;
         padding: 20px;
@@ -220,18 +290,39 @@
     }
 
 
+    /* --- MAIN SECTION --- */
+    .main__title {
+        display: block;
+        margin: 2.1em auto 1.5em;
+        text-align: center;
+    }
+    .main__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content;
+        grid-template-areas:
+            "history"
+            "mvl-container";
+        margin-bottom: 100px;
+    }
+    .mvl-container {
+        margin-top: 2em;
+        gap: 2em
+    }
+    .history, .mission, .vision, .location {
+        margin: auto;
+        width: 93%;
+    }
 
 
     /* --- ANIMATIONS --- */
-
     /* Animación para los items del menú */
     @keyframes fadeIn {
         from { opacity: 0; transform: translateX(-20px); }
         to { opacity: 1; transform: translateX(0); }
     }
-    .nav__ul.active .ul__item {
-        animation: fadeIn 0.3s ease forwards;
-    }
+
+    .nav__ul.active .ul__item {animation: fadeIn 0.3s ease forwards;}
+
     .nav__ul.active .ul__item:nth-child(1) { animation-delay: 0.1s; }
     .nav__ul.active .ul__item:nth-child(2) { animation-delay: 0.2s; }
     .nav__ul.active .ul__item:nth-child(3) { animation-delay: 0.3s; }

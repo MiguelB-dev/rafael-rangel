@@ -114,8 +114,8 @@ body {
     cursor: pointer;
     padding: 15px;
     position: absolute;
-    left: -10px;
-    top: -45px;
+    left: -15px;
+    top: -40px;
     z-index: 30;
 }
 
@@ -157,7 +157,6 @@ body {
 
 
 
-
 /* --- CAROUSEL --- */
 .carousel {
     grid-area: carousel;
@@ -184,6 +183,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10; /* Asegura que esté por encima de las imágenes */
 }
 
 .welcome-container h2 {
@@ -194,16 +194,13 @@ body {
     font-size: clamp(1px, 2dvw, 16px);
     padding-bottom: 0.5rem;
 }
-.welcome-container span {
-    font-size: 1.3em;
-}
 
 /* Imágenes del carrusel */
 .carousel ul {
     display: flex;
     width: 400%; /* el 400% adapta las 4 imágenes*/
     padding: 0;
-    animation: slide 20s infinite alternate ease-in-out;
+    transition: margin-left 0.5s ease-in-out; /* Transición suave */
 }
 
 .carousel li {
@@ -213,22 +210,8 @@ body {
 
 .carousel img {
     width: 100%;
-}
-
-/* Animación del carrusel */
-@keyframes slide {
-    /* La animación se adapta a 4 imágenes dentro del carrusel, si hay más o menos, puede romper */
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
+    height: 250px;
+    object-fit: cover; /* Asegura que las imágenes mantengan sus proporciones */
 }
 
 .carousel-btn {
@@ -242,6 +225,7 @@ body {
     padding: 6px 13px;
     font-size: 18px;
     border-radius: 50%;
+    z-index: 10; /* Asegura que esté por encima de las imágenes */
 }
 
 .prev-btn {
@@ -252,6 +236,29 @@ body {
     right: 15px;
 }
 
+/* Indicadores del carrusel */
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.carousel-indicators button.active {
+    background-color: white;
+}
 
 
 
@@ -259,6 +266,7 @@ body {
 main {
     grid-area: main;
     padding: 3em 5em;
+    margin-bottom: 120px;
 }
 
 .post-container {
@@ -328,22 +336,19 @@ main {
 /* --- ASIDE SECTION --- */
 .extra-information {
     grid-area: aside;
-    background-image: linear-gradient(135deg, #1758a7, #1c6caa, #1758a7);
-    border-radius: 6px;
-    position: sticky;
-    top: 125px;
+    background-image: linear-gradient(135deg, #06448f, #105e99, #06448f);
+    border-radius: 3px;
+    margin-top: 70px;
     height: fit-content;
     margin-right: 4em;
-    z-index: -1;
 }
 
 .extra__image-wrapper {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     overflow: hidden;
-    margin: auto;
-    margin-top: 1em;
+    margin: 2em auto;
 }
 
 .extra__image {
@@ -358,17 +363,28 @@ main {
 .extra__description {
     text-align: justify;
     color: aliceblue;
-    padding: 1em 2em;
-    font-size: 0.85em;
+    padding: 0 1.7em;
+    font-size: .9em;
+    margin-bottom: 1.1em;
 }
+
+.extra__link {
+    color: inherit;
+    margin-left: .4em;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.extra__link:hover {text-decoration: underline;}
 
 .extra__phrase {
     text-align: center;
     font-weight: bold;
     font-style: italic;
     color: aliceblue;
-    font-size: 0.9em;
-    margin-bottom: 1em;
+    font-size: 1.5em;
+    margin: 2em 0;
 }
 
 
@@ -404,7 +420,21 @@ main {
 
 /* --- RESPONSIVE DESIGN --- */
 @media (width <= 768px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content 1fr min-content min-content;
+        grid-template-areas: 
+            "header"
+            "carousel"
+            "main"
+            "aside"
+            "footer";
+    }
+
+
     /* --- HEADER SECTION --- */
+    /* Evita que rompa el diseño*/
+    .header {padding-top: 25px;}
 
     /* Al no haber logo, la barra de navegación puede ocupar más espacio */
     .header__nav {width: 95%;}
@@ -424,7 +454,7 @@ main {
         top: 0;
         left: 0;
         width: 55%;
-        height: 100vh;
+        height: 100dvh;
         background-color: rgba(23, 88, 167, 0.98);
         flex-direction: column;
         justify-content: start;
@@ -432,7 +462,6 @@ main {
         gap: 1.8em;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
-        z-index: 20;
         padding: 3.8em 0 0;
     }
     
@@ -449,14 +478,118 @@ main {
 
 
     
-    /* --- MAIN SECTION --- */
-    .post-container {
-        width: 80%;
-        grid-template-columns: 85%;
-        padding: 0%;
+
+    /* --- CAROUSEL --- */
+    .carousel {
+        width: 92%;
+        height: 150px;
+    }
+
+    .welcome-container {
+        padding: 1em 0;
+        width: 70%;
+    }
+
+    .welcome-container h2 {
+        font-size: .8em;
+        padding-bottom: 1.1rem;
+    }
+    .welcome-container p {
+        font-size: .6em;
+        padding-bottom: 0;
+    }
+
+    .carousel-btn {
+        background-color: rgba(0, 0, 0, 0.623);
+        padding: 3px 10px;
+        font-size: 15px;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    .carousel-indicators {
+        bottom: 3px;
+    }
+
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
     }
 
 
+
+
+    /* --- MAIN SECTION --- */
+    main {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .post-container {
+        margin: 70px auto;
+        width: 85%;
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    /* No hacen falta estas transiciones en dispositivos móviles */
+    .post:hover {
+        transform: initial;
+        box-shadow: initial;
+    }
+
+    .post__title {
+        font-size: clamp(14px, 2vw, 16px);
+        max-width: 100%;
+        margin-top: 0.7em;
+    }
+
+    /* Se elimina el peso visual del primer post, para que todos se vean igual */
+    .post:first-child {
+        grid-column: span 1;
+        height: 210px;
+        width: 100%;
+    }
+
+    .post:first-child .post__container-image {height: 65%;}
+
+
+
+
+    /* --- ASIDE SECTION --- */
+    .extra-information {
+        margin: 50px auto 110px;
+        width: 92%;
+    }
+
+    .extra__image-wrapper {
+        width: 110px;
+        height: 135px;
+        border-radius: initial;
+        margin: 22px 15px 3px 25px;
+        float:left;
+    }
+
+    /* Se quitan las transiciones de la imagen */
+    .extra__image {transition: initial;}
+
+    .extra__description {
+        padding: 20px 1.7em 0;
+        font-size: .9em;
+        margin-bottom: 1.1em;
+        text-align:justify;
+    }
+
+    .extra__phrase {margin: 1.5em 0;}
+
+
+    
 
     /* --- ANIMATIONS --- */
 

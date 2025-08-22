@@ -15,13 +15,13 @@ body {
 .layout {
     display: grid;
     min-height: 100dvh;
-    grid-template-columns: 1fr 1fr 0.8fr;
+    grid-template-columns: 2fr 0.8fr;
     grid-template-rows: min-content min-content 1fr min-content;
     grid-template-areas: 
-        "header header header"
-        "carousel carousel aside"
-        "main main aside"
-        "footer footer footer";
+        "header header"
+        "carousel aside"
+        "main aside"
+        "footer footer";
     width: 100%; /* o max-width: 100vw */
 }
 
@@ -304,6 +304,13 @@ main {
     border-radius: 6px 6px 0 0;
 }
 
+.post__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .post__title {
     color: #1d7bc4;
     text-align: center;
@@ -312,12 +319,6 @@ main {
     margin-top: 0.7em;
 }
 
-.post__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
 
 /* Dar peso visual a la primera publicacion */
 .post:first-child {

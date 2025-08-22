@@ -148,24 +148,22 @@
 
 
 /* --- MAIN SECTION --- */
-main {
-    flex-grow: 1;
-}
+main {flex-grow: 1;}
+
 .main__title {
     color: aliceblue;
     background-color: #1d7bc4;
     width: fit-content;
-    font-size: clamp(2px, 2.8dvw, 21px);
-    padding: .5em .7em;
-    display: inline-block;
+    font-size: clamp(18px, 2.8dvw, 23px);
+    padding: .4em .9em;
+    display: block;
     border-radius: 6px;
-    margin: 40px 20% 40px;
+    margin: 40px auto;
 }
-
 
 /* Estilos de la tabla */
 .tabla-calificaciones {
-    width: 85%;
+    width: clamp(200px, 85%, 1000px);
     border-collapse: collapse;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 6px;

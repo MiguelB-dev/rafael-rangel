@@ -258,6 +258,7 @@ body {
 
 .carousel-indicators button.active {
     background-color: white;
+    outline: 1px solid rgba(0, 0, 0, 0.479);
 }
 
 
@@ -432,10 +433,8 @@ main {
     }
 
 
-    /* --- HEADER SECTION --- */
-    /* Evita que rompa el diseño*/
-    .header {padding-top: 25px;}
 
+    /* --- HEADER SECTION --- */
     /* Al no haber logo, la barra de navegación puede ocupar más espacio */
     .header__nav {width: 95%;}
 
@@ -444,7 +443,6 @@ main {
 
     /* Sin el logo y las redes, centramos el titulo del encabezado */
     .header__title {margin: 0;}
-
 
     /* Barra de navegación */
     .nav__hamburger {display: block; /* Mostrar botón hamburguesa */}
@@ -486,40 +484,39 @@ main {
     }
 
     .welcome-container {
-        padding: 1em 0;
+        padding: .5em 0 .3em;
         width: 70%;
     }
 
     .welcome-container h2 {
-        font-size: .8em;
-        padding-bottom: 1.1rem;
+        font-size: 1em;
+        padding-bottom: .9rem;
     }
     .welcome-container p {
-        font-size: .6em;
+        font-size: .8em;
         padding-bottom: 0;
     }
 
     .carousel-btn {
         background-color: rgba(0, 0, 0, 0.623);
-        padding: 3px 10px;
-        font-size: 15px;
+        padding: 2px 10px;
+        font-size: 18px;
     }
 
-    .prev-btn {
-        left: 10px;
-    }
+    .prev-btn {left: 10px;}
 
-    .next-btn {
-        right: 10px;
-    }
+    .next-btn {right: 10px;}
 
     .carousel-indicators {
         bottom: 3px;
+        padding: 3px 8px;
+        border-radius: 20px;
+        background-color: #41414148;
     }
 
     .carousel-indicators button {
-        width: 10px;
-        height: 10px;
+        width: 13px;
+        height: 13px;
     }
 
 

@@ -157,6 +157,7 @@ body {
 
 
 
+
 /* --- CAROUSEL --- */
 .carousel {
     grid-area: carousel;
@@ -606,4 +607,7 @@ main {
     .nav__ul.active .ul__item:nth-child(2) { animation-delay: 0.2s; }
     .nav__ul.active .ul__item:nth-child(3) { animation-delay: 0.3s; }
     .nav__ul.active .ul__item:nth-child(4) { animation-delay: 0.4s; }
+    .nav__ul.active .ul__item:nth-child(5) { animation-delay: 0.5s; }
+    .nav__ul.active .ul__item:nth-child(6) { animation-delay: 0.6s; }
+    .nav__ul.active .ul__item:nth-child(7) { animation-delay: 0.7s; }
 }

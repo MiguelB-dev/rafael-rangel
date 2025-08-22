@@ -20,14 +20,16 @@
 
 /* --- HEADER SECTION --- */
 .header {
+    grid-area: header;
     background-image: linear-gradient(135deg, #1758a7, #1c6caa, #1758a7);
     border-bottom: 1.5px solid rgb(35, 76, 138);
-    padding: 20px 0 12px 0;
+    padding: 20px 0 12px;
     position: sticky;
     top: 0px;
+    z-index: 40;
 }
 
-/* Estilos del logo, titulo y las redes sociales */
+/* Estilos del logo, título y las redes sociales */
 .header__container {
     display: flex;
     justify-content: center;
@@ -50,10 +52,10 @@
     color: aliceblue;
     text-align: center;
     font-size: clamp(15px, 2.9dvw, 26px);
-    font-weight: bold;
     flex-basis: auto;
     flex-grow: 2;
     margin-left: 50px;
+    font-weight: bold;
 }
 
 .header__social-media {
@@ -103,9 +105,9 @@
     cursor: pointer;
     padding: 15px;
     position: absolute;
-    left: -10px;
-    top: -45px;
-    z-index: 20;
+    left: -15px;
+    top: -40px;
+    z-index: 30;
 }
 
 .hamburger-icon, .close-icon {
@@ -247,17 +249,15 @@ main {flex-grow: 1;}
 
 /* --- RESPONSIVE DESIGN --- */
 @media (width <= 768px) {
-    /* --- HEADER SECTION ---*/
-
+    /* --- HEADER SECTION --- */
     /* Al no haber logo, la barra de navegación puede ocupar más espacio */
     .header__nav {width: 95%;}
 
     /* Quitamos las redes sociales del encabezado para mantener un diseño compacto */
     .header__social-media, .header__logo {display: none;}
 
-    /* Sin el logo y las redes, centramos el titulo principal */
+    /* Sin el logo y las redes, centramos el titulo del encabezado */
     .header__title {margin: 0;}
-    
 
     /* Barra de navegación */
     .nav__hamburger {display: block; /* Mostrar botón hamburguesa */}
@@ -267,7 +267,7 @@ main {flex-grow: 1;}
         top: 0;
         left: 0;
         width: 55%;
-        height: 100vh;
+        height: 100dvh;
         background-color: rgba(23, 88, 167, 0.98);
         flex-direction: column;
         justify-content: start;
@@ -275,7 +275,6 @@ main {flex-grow: 1;}
         gap: 1.8em;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
-        z-index: 20;
         padding: 3.8em 0 0;
     }
     
@@ -289,6 +288,7 @@ main {flex-grow: 1;}
     }
     
     .nav__ul.active .ul__item {opacity: 1;}
+
 
 
 
@@ -317,6 +317,7 @@ main {flex-grow: 1;}
 
 
 
+
     /* --- ANIMATIONS --- */
 
     /* Animación para los items del menú */
@@ -331,4 +332,7 @@ main {flex-grow: 1;}
     .nav__ul.active .ul__item:nth-child(2) { animation-delay: 0.2s; }
     .nav__ul.active .ul__item:nth-child(3) { animation-delay: 0.3s; }
     .nav__ul.active .ul__item:nth-child(4) { animation-delay: 0.4s; }
+    .nav__ul.active .ul__item:nth-child(5) { animation-delay: 0.5s; }
+    .nav__ul.active .ul__item:nth-child(6) { animation-delay: 0.6s; }
+    .nav__ul.active .ul__item:nth-child(7) { animation-delay: 0.7s; }
 }

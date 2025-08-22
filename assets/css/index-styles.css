@@ -258,7 +258,6 @@ body {
 
 .carousel-indicators button.active {
     background-color: white;
-    outline: 1px solid rgba(0, 0, 0, 0.479);
 }
 
 
@@ -517,6 +516,10 @@ main {
     .carousel-indicators button {
         width: 13px;
         height: 13px;
+    }
+
+    .carousel-indicators button.active {
+        outline: 1px solid rgba(0, 0, 0, 0.479);
     }
 
 

@@ -20,7 +20,6 @@
 
 /* --- HEADER SECTION --- */
 .header {
-    grid-area: header;
     background-image: linear-gradient(135deg, #1758a7, #1c6caa, #1758a7);
     border-bottom: 1.5px solid rgb(35, 76, 138);
     padding: 20px 0 12px;

@@ -158,7 +158,13 @@ button:hover {
 /* --- RESPONSIVE DESIGN --- */
 @media (width <= 768px) {
     /* --- MAIN SECTION --- */
+    body {overflow: hidden;} /* Evita zoom de la imagen de fondo */
+
     .sign-in {width: 85%;}
+
+    .sign-in__header {padding: .5em 0;}
+
+    .header__logo {margin-bottom: 0 auto .3em;}
 
     .header__title {font-size: 1.6em;}
 }

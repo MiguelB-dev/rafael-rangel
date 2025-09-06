@@ -175,6 +175,10 @@ button:hover {
     /* --- MAIN SECTION --- */
     .sign-up {width: 85%;}
 
+    .sign-in__header {padding: .5em 0;}
+
+    .header__logo {margin-bottom: 0 auto .3em;}
+
     .header__title {font-size: 1.6em;}
 
     /* Ajusta el margen y padding de los elementos para ver más información en pantalla */

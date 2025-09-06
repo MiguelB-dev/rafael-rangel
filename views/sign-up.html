@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Crear una cuenta</title>
+    
+    <link rel="stylesheet" href="../assets/css/font.css">
+    <link rel="stylesheet" href="../assets/css/sign-up-styles.css">
+    <link rel="icon" href="../assets/img/favicon-sin-fondo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <main>
+        <form class="sign-up">
+            <header class="sign-up__header">
+                <img class="header__logo" src="../assets/img/favicon-sin-fondo.png" alt="Logo del Complejo Educativo Rafael Rangel">
+                <h1 class="header__title">Crear una cuenta</h1>
+            </header>
+
+            <div class="sign-up__inputs-container">
+                <label for="first-name">Nombres</label>
+                <input id="first-name" class="input__field" type="text" required>
+
+                <label for="last-name">Apellidos</label>
+                <input id="last-name" class="input__field" type="text" required>
+
+                <div class="form-group">
+                    <label for="birthdate">Fecha de nacimiento</label>
+                    <div class="birthdate-container">
+                        <select id="day" class="input__field" name="day" required>
+                            <option value="">Día</option>
+                            <!-- script -->
+                        </select>
+                            
+                        <select id="month" class="input__field" name="month" required>
+                            <option value="">Mes</option>
+                            <option value="1">Enero</option>
+                            <option value="2">Febrero</option>
+                            <option value="3">Marzo</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Mayo</option>
+                            <option value="6">Junio</option>
+                            <option value="7">Julio</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Septiembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">Noviembre</option>
+                            <option value="12">Diciembre</option>
+                        </select>
+                            
+                        <select id="year" class="input__field" name="year" required>
+                            <option value="">Año</option>
+                            <!-- script -->
+                        </select>
+                    </div>
+                    <!-- ERROR MESSAGE -->
+                    <div id="dateError" class="error-message"></div>
+                </div>
+
+                <p class="gender-indication">Género</p>
+                <div class="gender__wrapper">
+                    <div class="gender__option">
+                        <input id="male" name="genero" type="radio" value="hombre" >
+                        <label for="male">Hombre</label>
+                    </div>
+                
+                    <div class="gender__option">
+                        <input id="female" name="genero" type="radio" value="mujer">
+                        <label for="female">Mujer</label>
+                    </div>
+                </div>
+
+                <label for="cedula">Número de cédula</label>
+                <input id="cedula" class="input__field" type="number" required>
+                
+                <label for="correo">Correo</label>
+                <input id="correo" class="input__field" type="email" required>
+
+                <label for="password">Contraseña</label>
+                <div class="password-wrapper">
+                    <input id="password-input" class="input__field" type="password" required>
+                    <i class="password-eye fa-solid fa-eye-slash"></i> <!-- Password Eye -->
+                </div>
+
+                <label for="telephone">Teléfono</label>
+                <input id="telephone" class="input__field" type="tel" required>
+            </div>
+
+
+            <button type="submit">Registrarse</button>
+
+
+            <div class="sign-in-wrapper">
+                <p class="sign-in__message">¿Ya tienes una cuenta?</p>
+                <a class="sign-in__link" href="sign-in.html">Inicia sesión</a>
+            </div>
+        </form>
+    </main>
+    
+    <script src="../assets/js/password-eye.js"></script>
+    <script src="../assets/js/sign-up.js"></script>
+
+</body>
+</html>

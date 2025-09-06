@@ -6,6 +6,12 @@
     font-family: 'Montserrat';
 }
 
+:root {
+    --main-color: #3564CA;
+    --highlither: #5A80D3;
+    --hover-color: #cfe8f8;
+}
+
 .layout {
     display: flex;
     flex-direction: column;
@@ -140,7 +146,7 @@
 .ul__item:hover {background-color: rgb(56, 56, 56);}
 
 /* El enlace del link del Login */
-.ul__item--login {background-color: rgb(78, 143, 204);}
+.ul__item--sign-in {background-color: rgb(78, 143, 204);}
 
 
 
@@ -162,7 +168,7 @@ h1 {
 
 .help-container {
     width: 55%;
-    background-image: linear-gradient(135deg, #095dc4, #105e99, #095dc4);
+    background-color: var(--main-color);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -192,7 +198,7 @@ h1 {
 }
 
 .question:hover {
-    background-color: #cfe8f8;
+    background-color: var(--hover-color);
 }
 
 .question__title {
@@ -204,7 +210,7 @@ h1 {
     border: none;
     font-size: 20px;
     cursor: pointer;
-    color: #3498db;
+    color: var(--highlither);
 }
 
 .answer {

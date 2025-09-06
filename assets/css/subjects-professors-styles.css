@@ -6,6 +6,12 @@
     font-family: 'Montserrat';
 }
 
+:root {
+    --main-color: #3564CA;
+    --highlither: #5A80D3;
+    --hover-color: #cfe8f8;
+}
+
 .layout {
     display: flex;
     flex-direction: column;
@@ -143,7 +149,7 @@
 .ul__item:hover {background-color: rgb(56, 56, 56);}
 
 /* El enlace del link del Login */
-.ul__item--login {background-color: rgb(78, 143, 204);}
+.ul__item--sign-in {background-color: rgb(78, 143, 204);}
 
 
 
@@ -153,7 +159,7 @@ main {flex-grow: 1;}
 
 .main__title {
     color: aliceblue;
-    background-color: #1d7bc4;
+    background-color: var(--main-color);
     width: fit-content;
     font-size: clamp(18px, 2.8dvw, 23px);
     padding: .4em .9em;
@@ -180,7 +186,7 @@ main {flex-grow: 1;}
 }
 
 .tabla-docentes thead tr:last-child {
-    background-color: #1d7bc4;
+    background-color: var(--main-color);
     color: white;
 }
 
@@ -201,7 +207,7 @@ main {flex-grow: 1;}
 .tabla-docentes tbody tr:nth-child(even) {background-color: #c8d3d2;}
 
 .tabla-docentes tbody tr:hover {
-    background-color: #b6dbf5;
+    background-color: var(--hover-color);
     transition: background-color 0.3s;
 }
 

@@ -6,6 +6,12 @@
     font-family: 'Montserrat';
 }
 
+:root {
+    --main-color: #3564CA;
+    --highlither: #5A80D3;
+    --hover-color: #cfe8f8;
+}
+
 .layout {
     display: flex;
     flex-direction: column;
@@ -143,7 +149,7 @@
 .ul__item:hover {background-color: rgb(56, 56, 56);}
 
 /* El enlace del link del Login */
-.ul__item--login {background-color: rgb(78, 143, 204);}
+.ul__item--sign-in {background-color: rgb(78, 143, 204);}
 
 
 
@@ -163,7 +169,7 @@ main {
 }
 
 .post__title {
-    color: #1d7bc4;
+    color: var(--main-color);
     padding: 0 2em;
 }
 

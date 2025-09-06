@@ -1,0 +1,192 @@
+/* --- GENERAL STYLES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+
+:root {
+    --main-color: #3564CA;
+    --highlither: #5A80D3;
+    --hover-color: #cfe8f8;
+}
+
+
+
+
+/* --- MAIN STYLES --- */
+body {
+    background: url("../img/photos/wall.jpg") no-repeat top/cover;
+    min-height: 100dvh;
+}
+
+.sign-up {
+    background-color: rgb(227, 231, 240);
+    width: 33%;
+    margin: 50px auto;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sign-up__header {
+    background-color: var(--main-color);
+    border-radius: 10px 10px 0 0;
+    padding: .9rem 0;
+}
+
+.header__logo {
+    display: block;
+    width: 4em;
+    margin: 0 auto .4rem;
+}
+
+.header__title {
+    color: aliceblue;
+    text-align: center;
+    font-size: 1.9em;
+}
+
+.sign-up__inputs-container {
+    width: 87%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+label, .gender-indication {
+    display: block;
+    margin: 22px 0 6px;
+    color: #333;
+}
+        
+.input__field, .gender__option {
+    width: 100%;
+    padding: 11px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: .95em;
+    transition: border-color 0.3s;
+}
+
+/* Ajusta el padding de los select para no romper el layout */
+select.input-field {padding: 10px 6px 10px 10px;}
+        
+.input__field:focus {
+    outline: none;
+    border-color: var(--highlither);
+    box-shadow: 0 0 0 2px rgba(75, 108, 183, 0.2);
+}
+
+
+/* Estilos para la fecha de nacimiento y el género */
+.birthdate-container, .gender__wrapper {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+
+.gender__option {
+    background-color: white;
+}
+
+.gender__option > label {
+    margin: 0;
+    display: inline-block; 
+    color: black;
+    padding-left: 4px;
+}
+
+
+/* Estilos para la contrasena */
+.password-wrapper {position: relative;}
+
+.password-wrapper > .input-field {
+    padding: 12px 37px 12px 15px; /* Los 35px evitan que toque el icono */
+}
+
+.password-eye {
+    position: absolute;
+    right: 9px;
+    top: 52%;
+    transform: translateY(-52%);
+    color: #666;
+}
+
+.fa-eye {right: 10px;} /* Corrige el centrado del ojo cuando esta abierto */
+
+.password-eye:hover {
+    cursor: pointer;
+    color: #8d8b8b;
+}
+
+
+button {
+    display: block;
+    border-radius: 6px;
+    border: none;
+    width: 87%;
+    padding: 10px 10px;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: #37b958;
+    color: aliceblue;
+    margin: 1.7em auto;
+    transition: background-color .1s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #2c9647;
+}
+
+
+/* Enlace al sign-in */
+.sign-in-wrapper {
+    display: flex;
+    font-size: .76em;
+    gap: 5px;
+    justify-content: center;
+    color: rgb(39, 39, 39);
+    margin-bottom: .5em;
+}
+
+.sign-in__link {
+    color: var(--highlither);
+    text-decoration: none;
+}
+
+.sign-in__link:hover {text-decoration: underline;}
+
+
+/* Errores */
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin: 10px 0 15px;
+    display: none;
+}
+
+
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media (width <= 768px) {
+    /* --- MAIN SECTION --- */
+    .sign-up {width: 85%;}
+
+    .header__title {font-size: 1.6em;}
+
+    /* Ajusta el margen y padding de los elementos para ver más información en pantalla */
+    label {margin: 20px 0 5px;}
+
+    .input__field, .gender__option {
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+
+    select.input__field {
+        padding: 8px 5px;
+        font-size: .95em;
+    }
+}

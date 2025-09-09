@@ -8,17 +8,26 @@
 
 :root {
     --main-color: #3564CA;
+    --secundary-color: #E3E7F0;
+    --white: #f8f9fa;;
     --highlither: #5A80D3;
     --hover-color: #cfe8f8;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    background: url(../img/photos/wall.jpg) no-repeat top/cover;
 }
 
 
 
 
 /* --- MAIN STYLES --- */
-body {
-    background: url("../img/photos/wall.jpg") no-repeat top / cover;
-    height: 100dvh;
+main {
+    flex-grow: 1;
+    background-color: #3f404169;
 }
 
 .sign-in {
@@ -120,7 +129,7 @@ button {
     border-radius: 6px;
     border: none;
     width: 87%;
-    padding: 10px 10px;
+    padding: 12px 10px;
     font-weight: bold;
     font-size: 1em;
     background-color: #37b958;

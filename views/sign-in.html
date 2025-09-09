@@ -8,47 +8,48 @@
     
     <link rel="stylesheet" href="../assets/css/font.css">
     <link rel="stylesheet" href="../assets/css/sign-in-styles.css">
-    <link rel="icon" href="../assets/img/favicon-sin-fondo.png">
+    <link rel="icon" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="layout">
+        <main>
+            <form class="sign-in">
+                <header class="sign-in__header">
+                    <img class="header__logo" src="../assets/img/favicon.png" alt="Logo del Complejo Educativo Rafael Rangel">
+                    <h1 class="header__title">Iniciar sesión</h1>
+                </header>
+                
+                <div class="sign-in__inputs-container">
+                    <label for="correo">Correo</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-envelope input__icon"></i>
+                        <input id="correo" class="input__field" type="email" required>
+                    </div>
 
-    <main>
-        <form class="sign-in">
-            <header class="sign-in__header">
-                <img class="header__logo" src="../assets/img/favicon-sin-fondo.png" alt="Logo del Complejo Educativo Rafael Rangel">
-                <h1 class="header__title">Iniciar sesión</h1>
-            </header>
-            
-            <div class="sign-in__inputs-container">
-                <label for="correo">Correo</label>
-                <div class="input-group">
-                    <i class="fa-solid fa-envelope input__icon"></i>
-                    <input id="correo" class="input__field" type="email" required>
-                </div>
-
-                <label for="password">Contraseña</label>
-                <div class="password-wrapper">
-                    <i class="fa-solid fa-lock input__icon"></i>
-                    <input id="password" class="input__field" type="password" required>
-                    <i class="password-eye fa-solid fa-eye-slash"></i> <!-- Password Eye -->
+                    <label for="password">Contraseña</label>
+                    <div class="password-wrapper">
+                        <i class="fa-solid fa-lock input__icon"></i>
+                        <input id="password" class="input__field" type="password" required>
+                        <i class="password-eye fa-solid fa-eye-slash"></i> <!-- Password Eye -->
+                    </div>
+                    
+                    <label class="remember-me">
+                        <input id="remember-me" type="checkbox"> Recordarme
+                    </label>
                 </div>
                 
-                <label class="remember-me">
-                    <input id="remember-me" type="checkbox"> Recordarme
-                </label>
-            </div>
-            
 
-            <button type="submit">Iniciar Sesión</button>
+                <button type="submit">Iniciar Sesión</button>
 
 
-            <div class="sign-up-wrapper">
-                <p class="sign-up__message">¿No tienes una cuenta?</p>
-                <a class="sign-up__link" href="sign-up.html">Crea una</a>
-            </div>
-        </form>
-    </main>
+                <div class="sign-up-wrapper">
+                    <p class="sign-up__message">¿No tienes una cuenta?</p>
+                    <a class="sign-up__link" href="sign-up.html">Crea una</a>
+                </div>
+            </form>
+        </main>
+    </div>
     
     <script src="../assets/js/password-eye.js"></script>
 

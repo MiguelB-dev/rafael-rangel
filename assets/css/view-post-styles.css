@@ -8,6 +8,8 @@
 
 :root {
     --main-color: #3564CA;
+    --secundary-color: #E3E7F0;
+    --white: #f8f9fa;;
     --highlither: #5A80D3;
     --hover-color: #cfe8f8;
 }
@@ -16,9 +18,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
-    background-image: url(../img/photos/wall_2.jpg);
-    background-position: center;
-    background-size: cover;
+    background: url(../img/photos/wall_2.jpg) no-repeat center/cover;
 }
 
 
@@ -157,6 +157,7 @@
 /* --- MAIN SECTION --- */
 main {
     flex-grow: 1;
+    background-color: #3f404169;
 }
 
 .post {

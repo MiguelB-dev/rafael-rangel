@@ -8,6 +8,8 @@
 
 :root {
     --main-color: #3564CA;
+    --secundary-color: #E3E7F0;
+    --white: #f8f9fa;;
     --highlither: #5A80D3;
     --hover-color: #cfe8f8;
 }
@@ -16,9 +18,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
-    background-image: url(../img/backgrounds/calendar.jpg);
-    background-size: cover;
-    background-position: center;
+    background: url(../img/backgrounds/calendar.jpg) no-repeat center/cover;
 }
 
 
@@ -26,7 +26,7 @@
 
 /* --- HEADER SECTION --- */
 .header {
-    background-image: linear-gradient(135deg, #1758a7, #136baf, #1758a7);
+    background-image: linear-gradient(135deg, #1758a7, #1c6caa, #1758a7);
     border-bottom: 1.5px solid rgb(35, 76, 138);
     padding: 20px 0 12px;
     position: sticky;

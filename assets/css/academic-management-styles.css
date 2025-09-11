@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
-    background: url(../img/backgrounds/pencils.jpg) no-repeat center/cover;
+    background: url(../img/backgrounds/books.jpg) no-repeat center/cover;
 }
 
 
@@ -26,7 +26,7 @@
 
 /* --- HEADER SECTION --- */
 .header {
-    background-image: linear-gradient(135deg, #1758a7, #1c6caa, #1758a7);
+    background-image: linear-gradient(135deg, #1758a7, #136baf, #1758a7);
     border-bottom: 1.5px solid rgb(35, 76, 138);
     padding: 20px 0 12px;
     position: sticky;
@@ -171,52 +171,148 @@ main {
     margin: 40px 15% 40px;
 }
 
-/* Estilos de la tabla */
-.qualifications {
+
+.table-container {
     width: 85%;
-    border-collapse: collapse;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-    overflow: hidden; /* Para evitar que el borde redondo rompa */
     margin: auto;
     margin-bottom: 150px;
+    padding-top: 1.2em;
+    background-color: var(--main-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
     font-size: clamp(10px, 1.2dvw, 15px);
 }
 
-.qualifications th {
-    background-color: #2c3e50;
-    color: white;
+
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1.2em;
 }
 
-.qualifications thead tr:last-child th {background-color: #506a88;}
-
-.qualifications th, .qualifications td {
-    padding: 12px 15px;
+/* Ordenamiento */
+.order-wrapper {
+    display: flex;
+    gap: .8em;
     text-align: center;
 }
+.order-wrapper > label {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order-by {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0px 10px;
+    transition: border-color 0.3s;
+}    
+.order-by:hover {
+    border-color: var(--highlither);
+    box-shadow: 0 0 0 2px rgba(75, 108, 183, 0.2);
+}
+.order-by:focus {
+    outline-color: var(--highlither);
+    border-color: var(--highlither);
+    box-shadow: 0 0 0 2px rgba(75, 108, 183, 0.2);
+}
 
-.qualifications th {
+
+/* Botones de estado */
+.status-buttons-wrapper {
+    display: flex;
+    gap: .5em;
+}
+.status-buttons-wrapper > button {
+    width: 6em;
+    border-radius: 6px;
+    border: none;
+    padding: 8px 10px;
     font-weight: bold;
+    font-size: 1em;
+    color: aliceblue;
+    transition: background-color .1s ease-in-out;
+}
+.save {background-color: #37b958;}
+.cancel {background-color:#54595c;}
+.save:hover {
+    cursor: pointer;
+    background-color: #2c9647;
+}
+.cancel:hover {
+    cursor: pointer;
+    background-color:#3f4041;
+}
+
+
+/* Botones de acción */
+.action-buttons-wrapper {
+    display: flex;
+    gap: .5em;
+}
+.action-buttons-wrapper button {
+    width: 38px;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: box-shadow .1s ease-in-out;  
+}
+.action-buttons-wrapper button:hover {
+    box-shadow: 0 0 0 2px var(--hover-color);
+    cursor: pointer;
+}
+.action-buttons-wrapper i {
+    color: var(--hover-color);
+    font-size: 2em;
+}
+.edit {font-size: .75em;}
+.add {font-size: .9em;}
+
+
+/* Sección de la tabla */
+.students {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden; /* Para evitar que el borde redondo rompa */
+    font-size: clamp(10px, 1.2dvw, 15px);
+    border-radius: 0 0 6px 6px;
+}
+.students th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+}
+.students th, .students td {
+    padding: 12px .5em;
+    text-align: center;
     word-break: break-word; /* Rompe palabras largas */
     white-space: normal;    /* Permite múltiples líneas */
 }
+.students td {
+    padding: 12px .5em;
+    font-size: .95em;
+}
+.students thead tr:last-child th {background-color: #506a88;}
 
 
 /* Estilos para separacion visual entre filas y hover */
-.qualifications tbody tr:nth-child(odd) {
-    background-color: #f8f9fa;
-}
-.qualifications tbody tr:nth-child(even) {
-    background-color: #c8d3d2;
-}
+.students tbody tr:nth-child(odd) {background-color: #f8f9fa;}
+.students tbody tr:nth-child(even) {background-color: #c8d3d2;}
 
-.qualifications tbody tr:hover {
+.students tbody tr:hover {
     background-color: var(--hover-color);
     transition: background-color 0.3s;
 }
 
 
-/* Estilos para las notas e inasistencias */
+/* Color para datos de contacto */
+.email {color: #2980b9;}
+.telephone {color: #16a085;}
+
+/* Estilos para las notas e absences */
 .passing-grade { color: #27ae60; font-weight: bold; }
 .failed-grade { color: #e74c3c; font-weight: bold; }
 .absences { color: #f39c12; font-weight: bold; }
@@ -296,18 +392,58 @@ main {
     /* --- MAIN SECTION --- */
     .main__title {margin: 40px auto;}
 
-    .qualifications {
-        width: 90%;
+    .table-container {
+        width: 95%;
+        padding-top: .8em;
         margin-bottom: 100px;
     }
-
-    /* Adapta el tamaño de las casillas los lapsos para evitar que rompa el layout */
-    thead > tr:nth-child(2) > th {
-        padding: 12px 5px;
-        font-size: .8em;
+    
+    .icons-container {
+        width: 90%;
+        margin-bottom: 1.1em;
     }
 
+    /* Ordenamiento */
+    .order-wrapper {
+        flex-direction: column;
+        gap: .5em;
+    }
+    .order-by {
+        padding: 3px 0px;
+        font-size: 1em;
+    }
 
+    /* Botones de estado */
+    .status-buttons-wrapper > button {
+        width: 6.2em;
+        padding: 5px 0px;
+        align-self: center;
+    }
+
+    /* Botones de acción */
+    .action-buttons-wrapper {
+        gap: .8em;
+    }
+    .action-buttons-wrapper button {
+        width: 20px;  
+    }
+    .action-buttons-wrapper i {
+        font-size: 1.8em;
+    }
+    .delete {
+        font-size: .9em;
+    }
+
+    /* Seccion de la tabla */
+    .students {
+        width: 100%;
+    }
+    .students th, .students td {
+        font-size: 8px;
+        padding: 5px .2em;
+    }
+
+    
 
 
     /* --- ANIMATIONS --- */

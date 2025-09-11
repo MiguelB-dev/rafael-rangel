@@ -172,7 +172,7 @@ main {
 }
 
 /* Estilos de la tabla */
-.tabla-docentes {
+.professors {
     width: 85%;
     border-collapse: collapse;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -183,41 +183,37 @@ main {
     font-size: clamp(10px, 1.2dvw, 15px);
 }
 
-.tabla-docentes thead tr:first-child {
+.professors th {
     background-color: #2c3e50;
     color: white;
 }
 
-.tabla-docentes thead tr:last-child {
-    background-color: var(--main-color);
-    color: white;
-}
+.professors thead tr:last-child th {background-color: #506a88;}
 
-.tabla-docentes th, .tabla-docentes td {
+.professors th, .professors td {
     padding: .8em 1em;
     text-align: center;
-    border-bottom: 1px solid #e0e0e0;
     word-break: break-word; /* Rompe palabras largas */
     white-space: normal;    /* Permite múltiples líneas */
 }
 
-.tabla-docentes th {font-weight: bold;}
+.professors th {font-weight: bold;}
 
 
 /* Estilos para separaciom visual entre filas y hover */
-.tabla-docentes tbody tr:nth-child(odd) {background-color: #f8f9fa;}
+.professors tbody tr:nth-child(odd) {background-color: #f8f9fa;}
 
-.tabla-docentes tbody tr:nth-child(even) {background-color: #c8d3d2;}
+.professors tbody tr:nth-child(even) {background-color: #c8d3d2;}
 
-.tabla-docentes tbody tr:hover {
+.professors tbody tr:hover {
     background-color: var(--hover-color);
     transition: background-color 0.3s;
 }
 
 
 /* Color para datos de contacto */
-.contacto-email {color: #2980b9;}
-.contacto-telefono {color: #16a085;}
+.email {color: #2980b9;}
+.telephone {color: #16a085;}
 
 
 
@@ -294,15 +290,15 @@ main {
     /* --- MAIN SECTION --- */
     .main__title {margin: 40px auto;}
 
-    .tabla-docentes {
+    .professors {
         width: 90%;
         margin-bottom: 100px;
     }
 
     /* Adapta el tamaño de las casillas de correo y telefono para evitar que rompa el layout */
     thead > tr:nth-child(2) > th {padding: 12px 5px;}
-
     
+
 
     
     /* --- ANIMATIONS --- */

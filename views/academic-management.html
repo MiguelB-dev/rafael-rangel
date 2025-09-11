@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Gestión de Docentes</title>
+    <title>Gestión Académica</title>
 
     <link rel="stylesheet" href="../assets/css/font.css">
-    <link rel="stylesheet" href="../assets/css/professors-management-styles.css">
+    <link rel="stylesheet" href="../assets/css/academic-management-styles.css">
     <link rel="icon" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -55,7 +55,7 @@
                 <ul class="nav__ul">
                     <li class="ul__item"><a class="ul__link" href="../index.html">Inicio</a></li>
                     <li class="ul__item"><a class="ul__link" href="calendar.html">Calendario</a></li>
-                    <li class="ul__item"><a class="ul__link" href="professors-management.html">Gestión de Docentes</a></li>
+                    <li class="ul__item"><a class="ul__link" href="academic-management.html">Gestión Académica</a></li>
                     <li class="ul__item"><a class="ul__link" href="about-us.html">Sobre Nosotros</a></li>
                     <li class="ul__item"><a class="ul__link" href="help.html">Ayuda</a></li>
                     <li class="ul__item ul__item--sign-in"><a class="ul__link" href="sign-in.html">Cerrar Sesión</a></li>
@@ -66,7 +66,7 @@
 
         <!-- === MAIN SECTION === -->
         <main>
-            <h1 class="main__title">Gestión de Docentes</h1>
+            <h1 class="main__title">Gestión Académica</h1>
             
             <div class="table-container">
                 
@@ -96,64 +96,91 @@
                 </div>
 
 
-                <table class="professors">
+                <table class="students">
                     <thead>
                         <tr>
-                            <th>Cédula</t>
-                            <th>Nombres</th>
-                            <th>Apellidos</th>
-                            <th>Materia</th>
-                            <th>Año</th>
-                            <th>Sección</th>
-                            <th>Correo</th>
-                            <th>Teléfono</th>
-                            <th>Contraseña</th>
+                            <th rowspan="2">Cédula</t>
+                            <th rowspan="2">Nombres</th>
+                            <th rowspan="2">Apellidos</th>
+                            <th rowspan="2">Año</th>
+                            <th rowspan="2">Sección</th>
+                            <th rowspan="2">Materia</th>
+                            <th colspan="3">Calificaciones</th> <!-- Agrupa 3 columnas -->
+                            <th colspan="3">Inasistencias</th> <!-- Agrupa 3 columnas -->
+                        </tr>
+                        <tr>
+                            <!-- Subcabeceras de Calificaciones -->
+                            <th>1er lapso</th>
+                            <th>2do lapso</th>
+                            <th>3er lapso</th>
+                            <!-- Subcabeceras de Inasistencias -->
+                            <th>1er lapso</th>
+                            <th>2do lapso</th>
+                            <th>3er lapso</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>15671348</td>
-                            <td>María</td>
-                            <td>Pérez</td>
+                            <td>31732642</td>
+                            <td>Franco</td>
+                            <td>Ramírez</td>
+                            <td>3er Año</td>
+                            <td>A</td>
                             <td>Matemáticas</td>
-                            <td>3er año</td>
-                            <td>A</td>
-                            <td class="email">mperez@rrangel.edu.ve</td>
-                            <td class="telephone">+58 412-5551234</td>
-                            <td>mperez1998</td>
+                            <!-- Calificaciones -->
+                            <td class="passing-grade">18</td>
+                            <td class="passing-grade">17</td>
+                            <td class="passing-grade">19</td>
+                            <!-- Inasistencias -->
+                            <td class="absences">2</td>
+                            <td class="absences">1</td>
+                            <td class="absences">0</td>
                         </tr>
                         <tr>
-                            <td>12987653</td>
-                            <td>Carlos</td>
-                            <td>Rojas</td>
-                            <td>Historia</td>
-                            <td>4to año</td>
-                            <td>F</td>
-                            <td class="email">carlosrojas1991@rrangel.edu.ve</td>
-                            <td class="telephone">+58 416-5555678</td>
-                            <td>carlosr2025</td>
-                        </tr>
-                        <tr>
-                            <td>15973264</td>
-                            <td>Ana</td>
+                            <td>31747988</td>
+                            <td>Amelia</td>
                             <td>Briceño</td>
-                            <td>Inglés</td>
-                            <td>1er Año</td>
+                            <td>4to año</td>
                             <td>A</td>
-                            <td class="email">bricenoana1998@rrangel.edu.ve</td>
-                            <td class="telephone">+58 424-5557148</td>
-                            <td>anabriceño2024</td>
+                            <td>Física</td>
+                            <!-- Calificaciones -->
+                            <td class="passing-grade">18</td>
+                            <td class="passing-grade">17</td>
+                            <td class="passing-grade">19</td>
+                            <!-- Inasistencias -->
+                            <td class="absences">2</td>
+                            <td class="absences">1</td>
+                            <td class="absences">0</td>
                         </tr>
                         <tr>
-                            <td>17679613</td>
-                            <td>Karina</td>
-                            <td>Castellanos</td>
-                            <td>Ciencias de la Tierra</td>
+                            <td>31987653</td>
+                            <td>Carlos</td>
+                            <td>González</td>
+                            <td>3er año</td>
+                            <td>F</td>
+                            <td>Matemáticas</td>
+                            <td class="passing-grade">18</td>
+                            <td class="failed-grade">09</td>
+                            <td class="passing-grade">15</td>
+                            <!-- Inasistencias -->
+                            <td class="absences">1</td>
+                            <td class="absences">3</td>
+                            <td class="absences">2</td>
+                        </tr>
+                        <tr>
+                            <td>31679613</td>
+                            <td>Fabiana</td>
+                            <td>Torres</td>
                             <td>5to Año</td>
                             <td>C</td>
-                            <td class="email">kcsegovia@rrangel.edu.ve</td>
-                            <td class="telephone">+58 412-5558624</td>
-                            <td>karinac17679613</td>
+                            <td>Física</td>
+                            <td class="passing-grade">16</td>
+                            <td class="passing-grade">15</td>
+                            <td class="passing-grade">19</td>
+                            <!-- Inasistencias -->
+                            <td class="absences">2</td>
+                            <td class="absences">1</td>
+                            <td class="absences">0</td>
                         </tr>
                     </tbody>
                 </table>

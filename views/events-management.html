@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Evento</title>
+    <title>Eventos</title>
 
     <link rel="stylesheet" href="../assets/css/font.css">
-    <link rel="stylesheet" href="../assets/css/view-event-styles.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/events-posts-management-styles.css">
     <link rel="icon" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body data-page-type="event-management">
     <div class="layout">
-    
-    <!-- === HEADER SECTION === -->
+        
+        <!-- === HEADER SECTION === -->
         <header class="header">
-                
+            
             <div class="header__container">
 
                 <img class="header__logo" src="../assets/img/favicon.png">
@@ -47,35 +48,69 @@
                 <!-- Menú para Móviles -->
                 <button class="nav__hamburger" aria-label="Abrir menú">
                     <svg class="hamburger-icon" viewBox="0 0 24 24" width="24" height="24"> <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-                        
+                    
                     <svg class="close-icon" viewBox="0 0 24 24" width="24" height="24" style="display:none;"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
                 </button>
-                    
+                
                 <!-- Menú de Navegación -->
                 <ul class="nav__ul">
                     <li class="ul__item"><a class="ul__link" href="../index.html">Inicio</a></li>
                     <li class="ul__item"><a class="ul__link" href="calendar.html">Calendario</a></li>
-                    <li class="ul__item"><a class="ul__link" href="subjects-professors.html">Materias y Docentes</a>
-                    <li class="ul__item"><a class="ul__link" href="academic-summary.html">Resumen Académico</a>
-                    <li class="ul__item"><a class="ul__link" href="about-us.html"> Sobre Nosotros </a></li>
+                    <li class="ul__item"><a class="ul__link" href="posts-management.html">Publicaciones</a></li>
+                    <li class="ul__item"><a class="ul__link" href="events-management.html">Eventos</a></li>
+                    <li class="ul__item"><a class="ul__link" href="academic-management.html">Gestión Académica</a></li>
+                    <li class="ul__item"><a class="ul__link" href="about-us.html">Sobre Nosotros</a></li>
                     <li class="ul__item"><a class="ul__link" href="help.html">Ayuda</a></li>
-                    <li class="ul__item ul__item--sign-in"><a class="ul__link" href="sign-in.html">Iniciar Sesión</a></li>
+                    <li class="ul__item ul__item--sign-in"><a class="ul__link" href="sign-in.html">Cerrar Sesión</a></li>
                 </ul>
             </nav>
         </header>
 
 
         <!-- === MAIN SECTION === -->
-        <main>
-            <h1 class="main__title">Día de interés</h1>
-            <div class="event">
-                <h2 class="event__title"> Titulo del evento </h2>
-                <p class="event__date"><i class="fa-regular fa-calendar-days"></i> 10 de enero, 2025</p>
-                
-                <!-- Ejemplos -->
-                <p class="event__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quos doloremque fugit, odit molestiae dolorem harum, optio qui libero deserunt, fuga voluptas asperiores at veritatis. Ratione atque consectetur cumque quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit ab consectetur iusto ipsum vitae, quae, atque veniam animi doloribus sed quibusdam voluptates quisquam tempora magni corrupti tenetur eligendi.
-                </p>
-            </div>
+        <main>  
+            <form class="form">
+                <header class="form__header">
+                    <h1 class="form__title">Crear evento</h1>
+
+                    <div class="action-buttons-wrapper">
+                        <button id="add" class="user-selection" type="button"><i class="fa-solid fa-plus"></i></button>
+                        <button id="edit" type="button"><i class="fa-solid fa-pencil"></i></button>
+                        <button id="delete" type="button"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </header>
+        
+                <div class="form__inputs-container">
+                    <div class="select-wrapper">
+                        <label for="date">Fecha</label>
+                        <input id="date" class="input__field" type="date" required>
+                    </div>
+                    
+                    <label for="title">Título</label>
+                    <input id="title" class="input__field" type="text" required>
+
+                    <p class="event-type-indication">Tipo de evento</p>
+                    <div class="event-type">
+                        <div class="event-type__option">
+                            <input id="important-day" type="radio" name="option" value="important-day" required>
+                            <label for="important-day">Día de interés</label>
+                        </div>
+                        
+                        <div class="event-type__option">
+                            <input id="non-working-day" type="radio" name="option" value="non-working-day" required>
+                            <label for="non-working-day">Día no laborable</label>
+                        </div>
+                    </div>
+
+                    <label for="description">Descripción</label>
+                    <textarea id="description" class="input__field" required></textarea>
+                </div>
+
+                <div class="status-buttons-wrapper">
+                    <button id="save" type="submit">Crear</button>
+                    <button id="cancel" type="reset">Cancelar</button>
+                </div>
+            </form>
         </main>
 
 
@@ -88,5 +123,6 @@
     </div>
 
     <script src="../assets/js/hamburger-menu.js"></script>
+    <script src="../assets/js/events-posts-management.js"></script>
 </body>
 </html>

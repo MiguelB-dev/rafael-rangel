@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Post</title>
+    <title>*Fecha*</title>
 
     <link rel="stylesheet" href="../assets/css/font.css">
-    <link rel="stylesheet" href="../assets/css/view-post-styles.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/event-view-styles.css">
     <link rel="icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="layout">
-
-        <!-- === HEADER SECTION === -->
+    
+    <!-- === HEADER SECTION === -->
         <header class="header">
-            
+                
             <div class="header__container">
 
                 <img class="header__logo" src="../assets/img/favicon.png">
@@ -46,10 +48,10 @@
                 <!-- Menú para Móviles -->
                 <button class="nav__hamburger" aria-label="Abrir menú">
                     <svg class="hamburger-icon" viewBox="0 0 24 24" width="24" height="24"> <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-                    
+                        
                     <svg class="close-icon" viewBox="0 0 24 24" width="24" height="24" style="display:none;"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
                 </button>
-                
+                    
                 <!-- Menú de Navegación -->
                 <ul class="nav__ul">
                     <li class="ul__item"><a class="ul__link" href="../index.html">Inicio</a></li>
@@ -63,13 +65,16 @@
             </nav>
         </header>
 
-        
+
         <!-- === MAIN SECTION === -->
         <main>
-            <div class="post">
-                <h1 class="post__title"> Titulo de la publicacion </h1>
-                <img class="post__image" src="../assets/img/photos/meeting.png">
-                <p class="post__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quos doloremque fugit, odit molestiae dolorem harum, optio qui libero deserunt, fuga voluptas asperiores at veritatis. Ratione atque consectetur cumque quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit ab consectetur iusto ipsum vitae, quae, atque veniam animi doloribus sed quibusdam voluptates quisquam tempora magni corrupti tenetur eligendi. Reiciendis! Lorem ipsum dolor sit amet consectetur adipisicing elit. In exercitationem, rem consequuntur praesentium, necessitatibus quo eius animi maxime sed recusandae incidunt earum consectetur delectus totam reiciendis quisquam sunt illum? Aspernatur.
+            <h1 class="main__title">Día de interés</h1>
+            <div class="event">
+                <h2 class="event__title"> Titulo del evento </h2>
+                <p class="event__date"><i class="fa-regular fa-calendar-days"></i> 10 de enero, 2025</p>
+                
+                <!-- Ejemplos -->
+                <p class="event__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quos doloremque fugit, odit molestiae dolorem harum, optio qui libero deserunt, fuga voluptas asperiores at veritatis. Ratione atque consectetur cumque quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit ab consectetur iusto ipsum vitae, quae, atque veniam animi doloribus sed quibusdam voluptates quisquam tempora magni corrupti tenetur eligendi.
                 </p>
             </div>
         </main>
@@ -81,10 +86,8 @@
             <p class="footer__description"> Avenida 6 con calle Río de Janeiro, sector La Plata. Parroquia Juan Ignacio Montilla, municipio Valera, estado Trujillo </p>
             <p class="footer__description"> Complejo Educativo Rafael Rangel &copy; 2025 </p>
         </footer>
-
     </div>
 
     <script src="../assets/js/hamburger-menu.js"></script>
-
 </body>
 </html>

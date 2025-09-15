@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Gestión de Docentes</title>
+    <title>Publicaciones</title>
 
     <link rel="stylesheet" href="../assets/css/font.css">
     <link rel="stylesheet" href="../assets/css/global.css">
-    <link rel="stylesheet" href="../assets/css/professors-management-styles.css">
+    <link rel="stylesheet" href="../assets/css/events-posts-management-styles.css">
     <link rel="icon" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body data-page-type="posts-management">
     <div class="layout">
         
         <!-- === HEADER SECTION === -->
@@ -58,7 +58,7 @@
                     <li class="ul__item"><a class="ul__link" href="calendar.html">Calendario</a></li>
                     <li class="ul__item"><a class="ul__link" href="posts-management.html">Publicaciones</a></li>
                     <li class="ul__item"><a class="ul__link" href="events-management.html">Eventos</a></li>
-                    <li class="ul__item"><a class="ul__link" href="professors-management.html">Gestión de Docentes</a></li>
+                    <li class="ul__item"><a class="ul__link" href="academic-management.html">Gestión Académica</a></li>
                     <li class="ul__item"><a class="ul__link" href="about-us.html">Sobre Nosotros</a></li>
                     <li class="ul__item"><a class="ul__link" href="help.html">Ayuda</a></li>
                     <li class="ul__item ul__item--sign-in"><a class="ul__link" href="sign-in.html">Cerrar Sesión</a></li>
@@ -68,99 +68,39 @@
 
 
         <!-- === MAIN SECTION === -->
-        <main>
-            <h1 class="main__title">Gestión de Docentes</h1>
-            
-            <div class="table-container">
-                
-                <div class="icons-container">
-                    <div class="order-wrapper">
-                        <label for="order-by">Ordenar por:</label>
-                        <select id="order-by" class="order-by">
-                            <option value="1">Cédula</option>
-                            <option value="2">Nombres</option>
-                            <option value="3">Apellidos</option>
-                            <option value="4">Materia</option>
-                            <option value="5">Año</option>
-                            <option value="6">Sección</option>
-                        </select>
-                    </div>
-
-                    <div class="status-buttons-wrapper">
-                        <button class="save">Guardar</button>
-                        <button class="cancel">Cancelar</button>
-                    </div>
+        <main>  
+            <form class="form" enctype="multipart/form-data">
+                <header class="form__header">
+                    <h1 class="form__title">Crear publicación</h1>
 
                     <div class="action-buttons-wrapper">
-                        <button class="add"><i class="fa-solid fa-plus"></i></button>
-                        <button class="edit"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="delete"><i class="fa-regular fa-trash-can"></i></button>
+                        <button id="add" class="user-selection" type="button"><i class="fa-solid fa-plus"></i></button>
+                        <button id="edit" type="button"><i class="fa-solid fa-pencil"></i></button>
+                        <button id="delete" type="button"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
+                </header>
+        
+                <div class="form__inputs-container">
+                    <div class="select-wrapper">
+                        <label for="title">Título</label>
+                        <input id="title" class="input__field" type="text" required>
+                    </div>
+
+                    <label for="description">Descripción</label>
+                    <textarea id="description" class="input__field"></textarea>
+
+                    <label for="images">Imágenes (opcional)</label>
+                    <input id="images" class="input__field" type="file" accept="image/*" multiple>
+
+                    <label for="documents">Documentos (opcional)</label>
+                    <input id="documents" class="input__field" type="file" name="archivos[]" accept=".doc,.docx,.xls,.xlsx,.pdf" multiple>
                 </div>
 
-
-                <table class="professors">
-                    <thead>
-                        <tr>
-                            <th>Cédula</t>
-                            <th>Nombres</th>
-                            <th>Apellidos</th>
-                            <th>Materia</th>
-                            <th>Año</th>
-                            <th>Sección</th>
-                            <th>Correo</th>
-                            <th>Teléfono</th>
-                            <th>Contraseña</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>15671348</td>
-                            <td>María</td>
-                            <td>Pérez</td>
-                            <td>Matemáticas</td>
-                            <td>3er año</td>
-                            <td>A</td>
-                            <td class="email">mperez@rrangel.edu.ve</td>
-                            <td class="telephone">+58 412-5551234</td>
-                            <td>mperez1998</td>
-                        </tr>
-                        <tr>
-                            <td>12987653</td>
-                            <td>Carlos</td>
-                            <td>Rojas</td>
-                            <td>Historia</td>
-                            <td>4to año</td>
-                            <td>F</td>
-                            <td class="email">carlosrojas1991@rrangel.edu.ve</td>
-                            <td class="telephone">+58 416-5555678</td>
-                            <td>carlosr2025</td>
-                        </tr>
-                        <tr>
-                            <td>15973264</td>
-                            <td>Ana</td>
-                            <td>Briceño</td>
-                            <td>Inglés</td>
-                            <td>1er Año</td>
-                            <td>A</td>
-                            <td class="email">bricenoana1998@rrangel.edu.ve</td>
-                            <td class="telephone">+58 424-5557148</td>
-                            <td>anabriceño2024</td>
-                        </tr>
-                        <tr>
-                            <td>17679613</td>
-                            <td>Karina</td>
-                            <td>Castellanos</td>
-                            <td>Ciencias de la Tierra</td>
-                            <td>5to Año</td>
-                            <td>C</td>
-                            <td class="email">kcsegovia@rrangel.edu.ve</td>
-                            <td class="telephone">+58 412-5558624</td>
-                            <td>karinac17679613</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <div class="status-buttons-wrapper">
+                    <button id="save" type="submit">Crear</button>
+                    <button id="cancel" type="reset">Cancelar</button>
+                </div>
+            </form>
         </main>
 
 
@@ -173,6 +113,6 @@
     </div>
 
     <script src="../assets/js/hamburger-menu.js"></script>
-    <script src="../assets/js/professors-management.js"></script>
+    <script src="../assets/js/events-posts-management.js"></script>
 </body>
 </html>

@@ -1,0 +1,66 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background: url(../img/photos/wall_2.jpg) no-repeat center/cover;
+}
+
+
+
+
+/* --- MAIN SECTION --- */
+main {
+    flex-grow: 1;
+    background-color: #3f404169;
+}
+
+.post {
+    width: 60%;
+    border-radius: 6px;
+    height: fit-content;
+    background-color: aliceblue;
+    padding: 1em;
+    margin: 50px auto 150px;
+}
+
+.post__title {
+    color: var(--main-color);
+    padding: 0 2em;
+}
+
+.post__image {
+    margin: 2em auto 2.4em;
+    display: block;
+    width: 75%;
+    height: 15em;
+    object-fit: contain;
+}
+
+.post__description {
+    text-align: justify;
+    padding: 0 2.3em;
+    margin-bottom: 1em;
+}
+
+
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media (width <= 768px) {
+    /* --- MAIN SECTION --- */
+    .post {
+        width: 90%;
+        margin: 40px auto 100px;
+    }
+    .post__title {
+        padding: 0;
+        text-align: center;
+    }
+    .post__image {
+        width: 90%;
+        height: 12em;
+    }
+    .post__description {
+        padding: 0 .7em;
+    }
+}

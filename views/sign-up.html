@@ -27,48 +27,18 @@
                     <label for="last-name">Apellidos</label>
                     <input id="last-name" class="input__field" type="text" required>
 
-                    <div class="form-group">
-                        <label for="birthdate">Fecha de nacimiento</label>
-                        <div class="birthdate-container">
-                            <select id="day" class="input__field" name="day" required>
-                                <option value="">Día</option>
-                                <!-- script -->
-                            </select>
-                                
-                            <select id="month" class="input__field" name="month" required>
-                                <option value="">Mes</option>
-                                <option value="1">Enero</option>
-                                <option value="2">Febrero</option>
-                                <option value="3">Marzo</option>
-                                <option value="4">Abril</option>
-                                <option value="5">Mayo</option>
-                                <option value="6">Junio</option>
-                                <option value="7">Julio</option>
-                                <option value="8">Agosto</option>
-                                <option value="9">Septiembre</option>
-                                <option value="10">Octubre</option>
-                                <option value="11">Noviembre</option>
-                                <option value="12">Diciembre</option>
-                            </select>
-                                
-                            <select id="year" class="input__field" name="year" required>
-                                <option value="">Año</option>
-                                <!-- script -->
-                            </select>
-                        </div>
-                        <!-- ERROR MESSAGE -->
-                        <div id="dateError" class="error-message"></div>
-                    </div>
+                    <label for="birthdate">Fecha de nacimiento</label>
+                    <input id="birthdate" type="date" class="input__field" required>
 
                     <p class="gender-indication">Género</p>
                     <div class="gender__wrapper">
                         <div class="gender__option">
-                            <input id="male" name="genero" type="radio" value="hombre">
+                            <input id="male" name="genero" type="radio" value="hombre" required>
                             <label for="male">Hombre</label>
                         </div>
                     
                         <div class="gender__option">
-                            <input id="female" name="genero" type="radio" value="mujer">
+                            <input id="female" name="genero" type="radio" value="mujer" required>
                             <label for="female">Mujer</label>
                         </div>
                     </div>

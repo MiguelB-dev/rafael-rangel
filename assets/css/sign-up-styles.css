@@ -88,8 +88,8 @@ select.input-field {padding: 10px 6px 10px 10px;}
 }
 
 
-/* Estilos para la fecha de nacimiento y el género */
-.birthdate-container, .gender__wrapper {
+/* Estilos para el género */
+.gender__wrapper {
     display: flex;
     width: 100%;
     gap: 15px;

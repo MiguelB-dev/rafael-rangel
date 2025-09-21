@@ -2,7 +2,14 @@
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
+}
+
+/* * Cambio del fondo para cada pagina */
+body[data-page-type="academic-management"] > .layout {
     background: url(../img/backgrounds/books.jpg) no-repeat center/cover;
+}
+body[data-page-type="professors-management"] > .layout {
+    background: url(../img/backgrounds/library.jpg) no-repeat center/cover;
 }
 
 
@@ -122,49 +129,55 @@ main {
 
 
 /* Sección de la tabla */
-.students {
+/* General */
+.table {
     width: 100%;
     border-collapse: collapse;
     overflow: hidden; /* Para evitar que el borde redondo rompa */
     font-size: clamp(10px, 1.2dvw, 15px);
     border-radius: 0 0 6px 6px;
 }
-.students th {
+.table th {
     background-color: #2c3e50;
     color: white;
     font-weight: bold;
 }
-.students th, .students td {
+.table th, .table td {
     padding: 12px .5em;
     text-align: center;
     word-break: break-word; /* Rompe palabras largas */
     white-space: normal;    /* Permite múltiples líneas */
 }
-.students td {
-    padding: 12px .5em;
-    font-size: .95em;
-}
-.students thead tr:last-child th {background-color: #506a88;}
+.table td {font-size: .95em;}
 
 
 /* Estilos para separacion visual entre filas y hover */
-.students tbody tr:nth-child(odd) {background-color: #f8f9fa;}
-.students tbody tr:nth-child(even) {background-color: #c8d3d2;}
+.table tbody tr:nth-child(odd) {background-color: #f8f9fa;}
+.table tbody tr:nth-child(even) {background-color: #c8d3d2;}
 
-.students tbody tr:hover {
+.table tbody tr:hover {
     background-color: var(--hover-color);
     transition: background-color 0.3s;
 }
 
 
-/* Color para datos de contacto */
+/* Datos de contacto */
 .email {color: #2980b9;}
 .telephone {color: #16a085;}
 
-/* Estilos para las notas e absences */
+/* Notas e inasistencias */
 .passing-grade { color: #27ae60; font-weight: bold; }
 .failed-grade { color: #e74c3c; font-weight: bold; }
 .absences { color: #f39c12; font-weight: bold; }
+
+
+/* * Cambios para la tabla de academic-management */
+#students-table thead tr:last-child th {background-color: #506a88;}
+
+/* * Cambios para la tabla de professors-management */
+#professors-table th {padding: 1.2em .5em;}
+#professors-table td {padding: .8em .5em;}
+
 
 
 
@@ -216,12 +229,22 @@ main {
         font-size: .9em;
     }
 
+
     /* Seccion de la tabla */
-    .students {
+    .table {
         width: 100%;
     }
-    .students th, .students td {
+    .table th, .table td {
         font-size: 8px;
+    }
+
+    /* * Cambios para la tabla de academic-management */
+    #students-table th, #students-table td {
         padding: 5px .2em;
+    }
+
+    /* * Cambios para la tabla de professors-management */
+    #professors-table th, #professors-table td {
+        padding: 1em .3em;
     }
 }

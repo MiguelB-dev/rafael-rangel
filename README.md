@@ -9,7 +9,6 @@ El proyecto consiste en una plataforma de comunicación para el C.E Rafael Range
 - **Frontend**: HTML, CSS y JavaScript.
 - **Backend**: PHP.
 - **Base de datos**: SQL.
-- **Otras herramientas**: Git.
 
 ## Autores
 

@@ -19,13 +19,22 @@ main {
     border-radius: 6px;
     height: fit-content;
     background-color: aliceblue;
-    padding: 1em;
+    padding: 1em 32px;
     margin: 50px auto 150px;
 }
 
 .post__title {
     color: var(--main-color);
-    padding: 0 2em;
+    margin-bottom: .3em;
+}
+
+/* Ajusta los margenes del icono con el texto */
+p > .fa-calendar-days {margin: 0 .3em;}
+
+.post__date {
+    color: #54595c;
+    font-size: .81em;
+    margin-bottom: 2em;
 }
 
 .post__image {
@@ -38,8 +47,7 @@ main {
 
 .post__description {
     text-align: justify;
-    padding: 0 2.3em;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
 
@@ -50,17 +58,11 @@ main {
     /* --- MAIN SECTION --- */
     .post {
         width: 90%;
-        margin: 40px auto 100px;
-    }
-    .post__title {
-        padding: 0;
-        text-align: center;
+        padding: 1.5em;
+        margin-bottom: 100px;
     }
     .post__image {
         width: 90%;
         height: 12em;
-    }
-    .post__description {
-        padding: 0 .7em;
     }
 }

@@ -30,7 +30,7 @@ main {
     border-radius: 6px;
     height: fit-content;
     background-color: aliceblue;
-    padding: 1em 1.5em;
+    padding: 1em 32px;
     margin: 0 auto 150px;
 }
 
@@ -59,9 +59,12 @@ p > .fa-calendar-days {margin: 0 .3em;}
 /* --- RESPONSIVE DESIGN --- */
 @media (width <= 768px) {
     /* --- MAIN SECTION --- */
+    .main__title {
+        margin: 40px auto;
+    }
     .event {
         width: 90%;
+        padding: 1.5em;
         margin-bottom: 100px;
     }
-    .event__title {text-align: center;}
 }

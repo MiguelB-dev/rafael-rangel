@@ -130,21 +130,23 @@
     flex-basis: auto;
     list-style: none;
     border-radius: 6px;
-    padding: 6px;
     font-size: 0.9rem;
-    transition: background-color 0.2s ease;
 }
 
 .ul__link {
     color: aliceblue;
     text-decoration: none;
+    display: block;
+    padding: 6px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
 }
 
-.ul__item:hover {background-color: #407dc4;}
+.ul__link:hover {background-color: #407dc4;}
 
 /* Link del Sign-in / Sign-up */
 .ul__item--sign-in {background-color: rgb(70, 69, 69);}
-.ul__item--sign-in:hover {background-color: rgb(44, 44, 44);}
+.ul__item--sign-in :hover {background-color: rgb(44, 44, 44);}
 
 
 
